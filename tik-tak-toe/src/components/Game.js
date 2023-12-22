@@ -65,8 +65,8 @@ export default function Game() {
 
   useEffect(() => {
     const winner = checkWinner(score);
-    if (winner != "") {
-      const name = winner == "X" ? "Player One" : "Player Two";
+    if (winner !== "") {
+      const name = winner === "X" ? "Player One" : "Player Two";
       setTimeout(() => {
         alert(`${name} Wins!!`);
         setScore([
